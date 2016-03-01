@@ -55,7 +55,8 @@
 
 ##Todo
 
-- [ ] implement webrtc webcam react component 
+- [ ] use [server socket](https://github.com/Jermorin/opencv-server-socket) 
+- [ ] implement webrtc webcam react component 
 - [ ] use redux
 
 
