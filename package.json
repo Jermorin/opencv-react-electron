@@ -29,6 +29,7 @@
     "electron-prebuilt": "^0.36.9",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
+    "react-shapes": "^0.1.0",
     "react-webcam": "0.0.11"
   }
 }
