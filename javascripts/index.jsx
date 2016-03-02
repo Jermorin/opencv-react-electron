@@ -2,7 +2,9 @@ require('../less/main.less');
 
 'use strict';
 
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app.jsx';
 
-ReactDOM.render(<div className="myDiv">Hello Electron!</div>, document.getElementById('content'));
+
+ReactDOM.render(<App/>, document.getElementById('content'));
