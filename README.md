@@ -46,18 +46,14 @@
 
 ## Install
 
+- install [server socket](https://github.com/Jermorin/opencv-server-socket)
 - `npm install`
 
 ##Usage
 
+- launch [server socket](https://github.com/Jermorin/opencv-server-socket)
 - `npm run watch`
 - `npm run start`
-
-##Todo
-
-- [ ] use [server socket](https://github.com/Jermorin/opencv-server-socket) 
-- [ ] implement webrtc webcam react component 
-- [ ] use redux
 
 
 ## License
