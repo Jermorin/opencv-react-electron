@@ -13,7 +13,7 @@ const socketOptions = {
 
 const client = socket.connect(serverUrl, socketOptions);
 export default class App extends Component {
-    getImage() {
+    getFaces() {
         setInterval(()=> {
             const screenshot = this.refs.webcam.getScreenshot();
             this.client.emit('image', {base64: screenshot.toString()});
@@ -26,7 +26,7 @@ export default class App extends Component {
             this.client.on('faces', faces => console.log(faces));
         });
         return (
-            <div onClick={this.getImage.bind(this)}>
+            <div onClick={this.getFaces.bind(this)}>
                 <Webcam screenshotFormat='image/jpeg' ref='webcam' audio={false}/>
             </div>
         )
