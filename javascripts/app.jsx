@@ -58,14 +58,14 @@ export default class App extends Component {
 
     render() {
         const style = {position: 'static', top: 0, left: 0, 'minWidth': '100%'};
-        this.getFaces.bind(this)();
         return (
             <div>
                 <div className="faces"></div>
                 <div style={style}>
                     <Webcam screenshotFormat='image/jpeg'
                             ref='webcam'
-                            audio={false}/>
+                            audio={false}
+                            onUserMedia={this.getFaces.bind(this)}/>
                 </div>
             </div>
         )
