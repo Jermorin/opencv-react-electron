@@ -32,9 +32,7 @@ export default class App extends Component {
                     const leftRectangle = rect.x + 'px';
 
                     const styleRectangle = {position: 'fixed', top: topRectangle, left: leftRectangle, 'xIndex': 1};
-                    const styleLabel = {position: 'relative', color:'#E65243'};
                     return <div key={i} style={styleRectangle}>
-                        <div style={styleLabel}><b>People {i+1}</b></div>
                         <Rectangle width={rect.width}
                                    height={rect.height}
                                    fill={{color: "#2409ba", alpha: 4}}
