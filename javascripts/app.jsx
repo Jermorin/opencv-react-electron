@@ -28,17 +28,21 @@ export default class App extends Component {
         const faces = (
             <div>
                 {array.map(function (rect, i) {
-                    const top = rect.y + 'px';
-                    const left = rect.x + 'px';
-                    const style = {position: 'fixed', top: top, left: left, 'xIndex': 1};
-                    return <div key={i} style={style}>
+                    const topRectangle = rect.y + 'px';
+                    const leftRectangle = rect.x + 'px';
+
+                    const styleRectangle = {position: 'fixed', top: topRectangle, left: leftRectangle, 'xIndex': 1};
+                    const styleLabel = {position: 'relative', color:'#E65243'};
+                    return <div key={i} style={styleRectangle}>
+                        <div style={styleLabel}><b>People {i+1}</b></div>
                         <Rectangle width={rect.width}
                                    height={rect.height}
-                                   fill={{color: "#2409ba", alpha: 6}}
+                                   fill={{color: "#2409ba", alpha: 4}}
                                    stroke={{color:'#E65243'}}
-                                   strokeWidth={3}/></div>;
+                                   strokeWidth={3}/>
+                    </div>;
                 })}
-             </div>);
+            </div>);
 
         ReactDOM.render(faces, container);
     }
@@ -53,9 +57,10 @@ export default class App extends Component {
     }
 
     render() {
-        const style = {position: 'static', top: 0, left: 0, 'minWidth':'100%'};
+        const style = {position: 'static', top: 0, left: 0, 'minWidth': '100%'};
+        this.getFaces.bind(this)();
         return (
-            <div onClick={this.getFaces.bind(this)}>
+            <div>
                 <div className="faces"></div>
                 <div style={style}>
                     <Webcam screenshotFormat='image/jpeg'
