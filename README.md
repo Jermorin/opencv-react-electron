@@ -53,7 +53,7 @@
 
 - launch [server socket](https://github.com/Jermorin/opencv-server-socket)
 - `npm run watch`
-- `npm run start`
+- `npm run start` or go to `http://localhost:8080/`
 
 
 ## License
